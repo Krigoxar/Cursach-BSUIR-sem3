@@ -1,0 +1,6 @@
+include(CMakeFindDependencyMacro)
+if("OFF" STREQUAL "ON")
+    find_dependency(Snappy CONFIG)
+endif()
+find_dependency(bson-1.0 1.24.3)
+include("${CMAKE_CURRENT_LIST_DIR}/mongoc-targets.cmake")
